@@ -25,10 +25,10 @@ jobs:
         dotnet-version: '3.1.301'
 
     - name: Build with dotnet
-      run: dotnet build --configuration Release
+      run: dotnet build D:\a\VirStdv1\VirStdv1\MatchSchedulerAPI\MatchSchedulerAPI.csproj --configuration Release
 
     - name: dotnet publish
-      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+      run: dotnet publish D:\a\VirStdv1\VirStdv1\MatchSchedulerAPI\MatchSchedulerAPI.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
     - name: Run Azure webapp deploy action using publish profile credentials
       uses: azure/webapps-deploy@v2
@@ -37,4 +37,5 @@ jobs:
         slot-name: Production
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5FD4CA209C7048AA965B9BF3E9A0E2C0 }}
         package: .
+        
 
