@@ -36,5 +36,5 @@ jobs:
         app-name: matchschedulerapi
         slot-name: Production
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5FD4CA209C7048AA965B9BF3E9A0E2C0 }}
-        package: ../../MatchSchedulerAPI/
+        package: ../MatchSchedulerAPI/
 
