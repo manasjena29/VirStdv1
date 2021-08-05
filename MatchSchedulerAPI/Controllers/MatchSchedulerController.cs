@@ -19,7 +19,7 @@ namespace MatchSchedulerAPI.Controllers
     public class MatchSchedulerController : ControllerBase
     {
         private IRepository<Category> repository;
-        public MatchSchedulerController(IRepository<Category> _repository)
+        public MatchSchedulerController(IRepository<Category> _repository) 
         {
             repository = _repository;
         }
