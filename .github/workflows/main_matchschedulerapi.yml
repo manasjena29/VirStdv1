@@ -23,7 +23,10 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '3.1.301'
-
+    
+    - name: Clean with dotnet
+      run: dotnet clean --configuration Release
+    
     - name: Build with dotnet
       run: dotnet build D:\a\VirStdv1\VirStdv1\MatchSchedulerAPI\MatchSchedulerAPI.csproj --configuration Release
 
