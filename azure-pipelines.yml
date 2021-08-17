@@ -18,7 +18,10 @@ variables:
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
-
+- task: CopyFiles@2
+  inputs:
+    Contents: '**'
+    TargetFolder: '$(build.artifactstagingdirectory)'
 stages:
 - stage: Build
   displayName: Build and push stage
