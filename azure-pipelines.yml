@@ -39,5 +39,6 @@ stages:
         repository: $(imageRepository)
         dockerfile: $(dockerfilePath)
         containerRegistry: $(dockerRegistryServiceConnection)
+        buildContext: MatchSchedulerAPI
         tags: |
           $(tag)
